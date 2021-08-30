@@ -86,3 +86,11 @@
   left: -15%;
   top: -15%;
 }
+
+.blue:hover, .red:hover, .yellow:hover {
+  cursor: pointer;
+}
+
+.blue:active, .red:active, .yellow:active {
+  transform: translateY(3px);
+}

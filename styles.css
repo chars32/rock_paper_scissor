@@ -72,25 +72,25 @@
   position: absolute;
 }
 
-.yellow {
+.Yellow {
   right: -15%;
   top: -15%;
 }
 
-.red  {
+.Red  {
   bottom: -5%;
   left: 27%;
 }
 
-.blue {
+.Blue {
   left: -15%;
   top: -15%;
 }
 
-.blue:hover, .red:hover, .yellow:hover {
+.Blue:hover, .Red:hover, .Yellow:hover {
   cursor: pointer;
 }
 
-.blue:active, .red:active, .yellow:active {
+.Blue:active, .Red:active, .Yellow:active {
   transform: translateY(3px);
 }

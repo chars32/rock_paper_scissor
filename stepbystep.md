@@ -9,8 +9,6 @@
         #1f3757 0%,
         #131537 100%
     );)__
-* Include TailwindCSS in the project
-* Read about Tailwind
 
 ## Scoreboard
 * Make scoreboard main div

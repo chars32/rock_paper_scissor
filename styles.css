@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
+}
+
 #mainContainer {
   background: radial-gradient(
     134.34% 134.34% at 50% 0%,
@@ -16,6 +24,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 #scoreboard {
@@ -93,4 +102,63 @@
 
 .Blue:active, .Red:active, .Yellow:active {
   transform: translateY(3px);
+}
+
+.hide {
+  display: none;
+}
+
+#boardScoreResult {
+  height: 65%;
+  background-color: rgb(30, 42, 97);
+  position: absolute;
+  top: 18%;
+  width: 70%;
+  border-radius: 15px;
+  border: 1px solid rgb(196, 192, 192);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#boardScoreResult__status{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  height: 15%;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+
+#boardScoreResult__action {
+  height: 55%;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#boardScoreResult__action span {
+  font-size: 3.5em;
+  color: rgb(146, 146, 146);
+}
+
+#boardScoreResult__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 30%;
+}
+
+#play, #reset {
+  padding: 3% 5%;
+  background-color: rgb(139, 149, 190);
+  cursor: pointer;
+}
+
+#play:hover, #reset:hover {
+  background-color: rgb(63, 55, 110);
+  color: white;
 }

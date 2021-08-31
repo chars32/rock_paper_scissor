@@ -176,3 +176,11 @@ body {
   align-items: center;
   color: white;
 }
+
+#resetButton {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15%;
+}

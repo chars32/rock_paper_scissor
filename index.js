@@ -5,6 +5,8 @@ const pcChoose = document.querySelector('#pcChoose')
 const buttonReset = document.querySelector('#reset')
 const playAgain = document.querySelector('#play')
 const boardScoreResultShow = document.querySelector('#boardScoreResult__score')
+const scoreboardTableScore = document.querySelector('#scoreboard__table__score')
+const resetButton = document.querySelector('#reset')
 
 // An object of the colors with their game options
 const optionsValues = {
@@ -12,6 +14,8 @@ const optionsValues = {
     Red: 'Rock',
     Yellow: 'Scissors'
 }
+
+let scoreCount = 0
 
 /* 
     Function to return the value of the element
@@ -56,6 +60,10 @@ const verificateLength = (userChoose, pcChoose) => {
 // #boardScoreResult__score html element
 const resultGame = (result) => {
     boardScoreResultShow.children[0].innerHTML = result
+    if (result === 'Win') {
+        scoreCount++
+        scoreboardTableScore.innerHTML = scoreCount
+    }
 }
 
 // --- Play the game function ---
@@ -92,6 +100,13 @@ buttonReset.addEventListener('click', () => {
     console.log('reset')
 })
 
+// Eventlistener show the boardScoreResult
 playAgain.addEventListener('click', () => {
     boardScoreResult.style.display = 'none'
+})
+
+// Eventlistener reset the score
+resetButton.addEventListener('click', () => {
+    scoreCount = 0
+    scoreboardTableScore.innerHTML = scoreCount
 })

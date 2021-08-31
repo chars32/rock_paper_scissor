@@ -134,7 +134,7 @@ body {
 }
 
 #boardScoreResult__action {
-  height: 55%;
+  height: 40%;
   width: 80%;
   display: flex;
   justify-content: space-evenly;
@@ -151,6 +151,8 @@ body {
   justify-content: space-evenly;
   align-items: center;
   width: 30%;
+  white-space: inherit;
+  height: 20%;
 }
 
 #play, #reset {
@@ -161,5 +163,16 @@ body {
 
 #play:hover, #reset:hover {
   background-color: rgb(63, 55, 110);
+  color: white;
+}
+
+#boardScoreResult__score{
+  width: 30%;
+  height: 10%;
+  text-align: center;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
 }

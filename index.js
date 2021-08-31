@@ -4,6 +4,7 @@ const userChoose = document.querySelector('#userChoose')
 const pcChoose = document.querySelector('#pcChoose')
 const buttonReset = document.querySelector('#reset')
 const playAgain = document.querySelector('#play')
+const boardScoreResultShow = document.querySelector('#boardScoreResult__score')
 
 // An object of the colors with their game options
 const optionsValues = {
@@ -51,7 +52,13 @@ const verificateLength = (userChoose, pcChoose) => {
     }
 }
 
-// Play the game function
+// Function change de innerHTML of the p tag in
+// #boardScoreResult__score html element
+const resultGame = (result) => {
+    boardScoreResultShow.children[0].innerHTML = result
+}
+
+// --- Play the game function ---
 let playGame = (optionUser) => {
     let optionPC = randomOptionPC()
 
@@ -67,16 +74,16 @@ let playGame = (optionUser) => {
 
     // logic of the game
     if (optionUser === 'Rock' && optionPC === 'Scissors') {
-        console.log('Ganaste')
+        resultGame('Win')
     } else if (optionUser === 'Scissors' && optionPC === 'Paper') {
-        console.log('Ganaste')
+        resultGame('Win')
     } else if (optionUser === 'Paper' && optionPC === 'Rock') {
-        console.log('Ganaste')
+        resultGame('Win')
     } else if (optionUser === optionPC) {
-        console.log('Empate')
+        resultGame('Tie')
     }
     else {
-        console.log('Perdiste')
+        resultGame('Loose')
     }
 }
 

@@ -43,16 +43,28 @@ const drawImage = (imageOptions) => {
     return usrImg
 }
 
+// Function to verificate length of the pc and user options
+const verificateLength = (userChoose, pcChoose) => {
+    if (userChoose.children.length > 0) {
+        userChoose.removeChild(userChoose.children[0])
+        pcChoose.removeChild(pcChoose.children[0])
+    }
+}
+
 // Play the game function
 let playGame = (optionUser) => {
     let optionPC = randomOptionPC()
-    
-    boardScoreResult.style.display = 'block'
+
+    verificateLength(userChoose, pcChoose)
+
+    // Bringin back the boardScoreResult
+    boardScoreResult.style.display = 'flex'
 
     // Draw the images
     userChoose.appendChild(drawImage(optionUser))
     pcChoose.appendChild(drawImage(optionPC))
-    
+
+
     // logic of the game
     if (optionUser === 'Rock' && optionPC === 'Scissors') {
         console.log('Ganaste')
